@@ -7,6 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775F573F17FFD1B7007E4B1D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 775F573E17FFD1B7007E4B1D /* MainViewController.m */; };
+		77661EEF17FFB152007FAAE0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77661EEE17FFB152007FAAE0 /* FacebookSDK.framework */; };
+		77C89F3017FFE335009ABB98 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F1817FFE335009ABB98 /* NSObject+SBJson.m */; };
+		77C89F3117FFE335009ABB98 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F1B17FFE335009ABB98 /* SBJsonParser.m */; };
+		77C89F3217FFE335009ABB98 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F1D17FFE335009ABB98 /* SBJsonStreamParser.m */; };
+		77C89F3317FFE335009ABB98 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F1F17FFE335009ABB98 /* SBJsonStreamParserAccumulator.m */; };
+		77C89F3417FFE335009ABB98 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F2117FFE335009ABB98 /* SBJsonStreamParserAdapter.m */; };
+		77C89F3517FFE335009ABB98 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F2317FFE335009ABB98 /* SBJsonStreamParserState.m */; };
+		77C89F3617FFE335009ABB98 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F2517FFE335009ABB98 /* SBJsonStreamWriter.m */; };
+		77C89F3717FFE335009ABB98 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F2717FFE335009ABB98 /* SBJsonStreamWriterAccumulator.m */; };
+		77C89F3817FFE335009ABB98 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F2917FFE335009ABB98 /* SBJsonStreamWriterState.m */; };
+		77C89F3917FFE335009ABB98 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F2B17FFE335009ABB98 /* SBJsonTokeniser.m */; };
+		77C89F3A17FFE335009ABB98 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F2D17FFE335009ABB98 /* SBJsonUTF8Stream.m */; };
+		77C89F3B17FFE335009ABB98 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F2F17FFE335009ABB98 /* SBJsonWriter.m */; };
+		77C89F4418001E48009ABB98 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F3E18001E48009ABB98 /* MLPAutoCompleteTextField.m */; };
+		77C89F4518001E48009ABB98 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F4318001E48009ABB98 /* NSString+Levenshtein.m */; };
+		77C89F48180022BE009ABB98 /* SearchBeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F47180022BE009ABB98 /* SearchBeerViewController.m */; };
+		77C89F4B18002CC1009ABB98 /* DEMOCustomAutoCompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C89F4A18002CC1009ABB98 /* DEMOCustomAutoCompleteCell.m */; };
+		77C89F4D18005D6D009ABB98 /* Wood-Background-Images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77C89F4C18005D6D009ABB98 /* Wood-Background-Images.jpg */; };
+		77C89F51180060DF009ABB98 /* bmulogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C89F50180060DF009ABB98 /* bmulogo.png */; };
+		77C89F5318006473009ABB98 /* Madera bonita n.n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77C89F5218006473009ABB98 /* Madera bonita n.n.jpg */; };
+		77E51DE41800801B00B91DB8 /* RateBeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E51DE31800801B00B91DB8 /* RateBeerViewController.m */; };
+		77E51DEC1800808900B91DB8 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E51DE71800808900B91DB8 /* Location.m */; };
+		77E51DED1800808900B91DB8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E51DE91800808900B91DB8 /* User.m */; };
+		77E51DEE1800808900B91DB8 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E51DEB1800808900B91DB8 /* Beer.m */; };
+		77E51DF41800854600B91DB8 /* BeerColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E51DF11800854600B91DB8 /* BeerColorView.xib */; };
+		77E51DF51800854600B91DB8 /* BeerColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E51DF31800854600B91DB8 /* BeerColorView.m */; };
+		77E51DFA180085D700B91DB8 /* LGRatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E51DF9180085D700B91DB8 /* LGRatingViewController.m */; };
+		77E51DFE180093CB00B91DB8 /* whatAzul.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E51DFD180093CB00B91DB8 /* whatAzul.png */; };
+		77E51E001800941E00B91DB8 /* madera.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E51DFF1800941E00B91DB8 /* madera.png */; };
+		77E51E021800950F00B91DB8 /* rate.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E51E011800950F00B91DB8 /* rate.png */; };
+		77E51E04180095F000B91DB8 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E51E03180095F000B91DB8 /* search.png */; };
+		77E51E06180095FC00B91DB8 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E51E05180095FC00B91DB8 /* logout.png */; };
+		77E51E0A180097E700B91DB8 /* star-empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E51E08180097E700B91DB8 /* star-empty@2x.png */; };
+		77E51E0B180097E700B91DB8 /* star-full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E51E09180097E700B91DB8 /* star-full@2x.png */; };
+		77E51E101800985000B91DB8 /* TopBeersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E51E0E1800985000B91DB8 /* TopBeersViewController.m */; };
+		77E51E111800985000B91DB8 /* TopBeersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E51E0F1800985000B91DB8 /* TopBeersViewController.xib */; };
+		77E51E161800986D00B91DB8 /* TopBeersCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E51E131800986D00B91DB8 /* TopBeersCellView.xib */; };
+		77E51E171800986D00B91DB8 /* TopBeersCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E51E151800986D00B91DB8 /* TopBeersCellView.m */; };
+		77E51E191800A13A00B91DB8 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E51E181800A13A00B91DB8 /* facebook.png */; };
 		7951657117FFA77C00DB27F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7951657017FFA77C00DB27F0 /* Foundation.framework */; };
 		7951657317FFA77C00DB27F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7951657217FFA77C00DB27F0 /* CoreGraphics.framework */; };
 		7951657517FFA77C00DB27F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7951657417FFA77C00DB27F0 /* UIKit.framework */; };
@@ -14,8 +54,7 @@
 		7951657D17FFA77C00DB27F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951657C17FFA77C00DB27F0 /* main.m */; };
 		7951658117FFA77C00DB27F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951658017FFA77C00DB27F0 /* AppDelegate.m */; };
 		7951658417FFA77C00DB27F0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7951658217FFA77C00DB27F0 /* Main_iPhone.storyboard */; };
-		7951658717FFA77C00DB27F0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7951658517FFA77C00DB27F0 /* Main_iPad.storyboard */; };
-		7951658A17FFA77C00DB27F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951658917FFA77C00DB27F0 /* ViewController.m */; };
+		7951658A17FFA77C00DB27F0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951658917FFA77C00DB27F0 /* LoginViewController.m */; };
 		7951658C17FFA77C00DB27F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7951658B17FFA77C00DB27F0 /* Images.xcassets */; };
 		7951659317FFA77C00DB27F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7951659217FFA77C00DB27F0 /* XCTest.framework */; };
 		7951659417FFA77C00DB27F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7951657017FFA77C00DB27F0 /* Foundation.framework */; };
@@ -35,6 +74,75 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		775F573D17FFD1B7007E4B1D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		775F573E17FFD1B7007E4B1D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		77661EEE17FFB152007FAAE0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		77C89F1717FFE335009ABB98 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		77C89F1817FFE335009ABB98 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		77C89F1917FFE335009ABB98 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		77C89F1A17FFE335009ABB98 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		77C89F1B17FFE335009ABB98 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		77C89F1C17FFE335009ABB98 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		77C89F1D17FFE335009ABB98 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		77C89F1E17FFE335009ABB98 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		77C89F1F17FFE335009ABB98 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		77C89F2017FFE335009ABB98 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		77C89F2117FFE335009ABB98 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		77C89F2217FFE335009ABB98 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		77C89F2317FFE335009ABB98 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		77C89F2417FFE335009ABB98 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		77C89F2517FFE335009ABB98 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		77C89F2617FFE335009ABB98 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		77C89F2717FFE335009ABB98 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		77C89F2817FFE335009ABB98 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		77C89F2917FFE335009ABB98 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		77C89F2A17FFE335009ABB98 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		77C89F2B17FFE335009ABB98 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		77C89F2C17FFE335009ABB98 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		77C89F2D17FFE335009ABB98 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		77C89F2E17FFE335009ABB98 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		77C89F2F17FFE335009ABB98 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		77C89F3D18001E48009ABB98 /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
+		77C89F3E18001E48009ABB98 /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
+		77C89F3F18001E48009ABB98 /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
+		77C89F4018001E48009ABB98 /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
+		77C89F4118001E48009ABB98 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
+		77C89F4218001E48009ABB98 /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
+		77C89F4318001E48009ABB98 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
+		77C89F46180022BE009ABB98 /* SearchBeerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBeerViewController.h; sourceTree = "<group>"; };
+		77C89F47180022BE009ABB98 /* SearchBeerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBeerViewController.m; sourceTree = "<group>"; };
+		77C89F4918002CC1009ABB98 /* DEMOCustomAutoCompleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOCustomAutoCompleteCell.h; sourceTree = "<group>"; };
+		77C89F4A18002CC1009ABB98 /* DEMOCustomAutoCompleteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOCustomAutoCompleteCell.m; sourceTree = "<group>"; };
+		77C89F4C18005D6D009ABB98 /* Wood-Background-Images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wood-Background-Images.jpg"; sourceTree = "<group>"; };
+		77C89F50180060DF009ABB98 /* bmulogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bmulogo.png; sourceTree = "<group>"; };
+		77C89F5218006473009ABB98 /* Madera bonita n.n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Madera bonita n.n.jpg"; sourceTree = "<group>"; };
+		77E51DE21800801B00B91DB8 /* RateBeerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateBeerViewController.h; sourceTree = "<group>"; };
+		77E51DE31800801B00B91DB8 /* RateBeerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateBeerViewController.m; sourceTree = "<group>"; };
+		77E51DE61800808900B91DB8 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		77E51DE71800808900B91DB8 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		77E51DE81800808900B91DB8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		77E51DE91800808900B91DB8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		77E51DEA1800808900B91DB8 /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beer.h; sourceTree = "<group>"; };
+		77E51DEB1800808900B91DB8 /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
+		77E51DF11800854600B91DB8 /* BeerColorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeerColorView.xib; sourceTree = "<group>"; };
+		77E51DF21800854600B91DB8 /* BeerColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerColorView.h; sourceTree = "<group>"; };
+		77E51DF31800854600B91DB8 /* BeerColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerColorView.m; sourceTree = "<group>"; };
+		77E51DF8180085D700B91DB8 /* LGRatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGRatingViewController.h; sourceTree = "<group>"; };
+		77E51DF9180085D700B91DB8 /* LGRatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGRatingViewController.m; sourceTree = "<group>"; };
+		77E51DFD180093CB00B91DB8 /* whatAzul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatAzul.png; sourceTree = "<group>"; };
+		77E51DFF1800941E00B91DB8 /* madera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madera.png; sourceTree = "<group>"; };
+		77E51E011800950F00B91DB8 /* rate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rate.png; sourceTree = "<group>"; };
+		77E51E03180095F000B91DB8 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		77E51E05180095FC00B91DB8 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		77E51E08180097E700B91DB8 /* star-empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-empty@2x.png"; sourceTree = "<group>"; };
+		77E51E09180097E700B91DB8 /* star-full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-full@2x.png"; sourceTree = "<group>"; };
+		77E51E0D1800985000B91DB8 /* TopBeersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopBeersViewController.h; path = "../../../../../../../Volumes/Sin título/BeerMeUpLay/BeerMeUp/TopBeersViewController.h"; sourceTree = "<group>"; };
+		77E51E0E1800985000B91DB8 /* TopBeersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopBeersViewController.m; path = "../../../../../../../Volumes/Sin título/BeerMeUpLay/BeerMeUp/TopBeersViewController.m"; sourceTree = "<group>"; };
+		77E51E0F1800985000B91DB8 /* TopBeersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopBeersViewController.xib; path = "../../../../../../../Volumes/Sin título/BeerMeUpLay/BeerMeUp/TopBeersViewController.xib"; sourceTree = "<group>"; };
+		77E51E131800986D00B91DB8 /* TopBeersCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopBeersCellView.xib; sourceTree = "<group>"; };
+		77E51E141800986D00B91DB8 /* TopBeersCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopBeersCellView.h; sourceTree = "<group>"; };
+		77E51E151800986D00B91DB8 /* TopBeersCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopBeersCellView.m; sourceTree = "<group>"; };
+		77E51E181800A13A00B91DB8 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		7951656D17FFA77C00DB27F0 /* BeerMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7951657017FFA77C00DB27F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7951657217FFA77C00DB27F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,9 +154,8 @@
 		7951657F17FFA77C00DB27F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7951658017FFA77C00DB27F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7951658317FFA77C00DB27F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		7951658617FFA77C00DB27F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		7951658817FFA77C00DB27F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7951658917FFA77C00DB27F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7951658817FFA77C00DB27F0 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7951658917FFA77C00DB27F0 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7951658B17FFA77C00DB27F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7951659117FFA77C00DB27F0 /* BeerMeUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerMeUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7951659217FFA77C00DB27F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77661EEF17FFB152007FAAE0 /* FacebookSDK.framework in Frameworks */,
 				7951657317FFA77C00DB27F0 /* CoreGraphics.framework in Frameworks */,
 				7951657517FFA77C00DB27F0 /* UIKit.framework in Frameworks */,
 				7951657117FFA77C00DB27F0 /* Foundation.framework in Frameworks */,
@@ -81,6 +189,123 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77C89F1617FFE320009ABB98 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				77C89F1717FFE335009ABB98 /* NSObject+SBJson.h */,
+				77C89F1817FFE335009ABB98 /* NSObject+SBJson.m */,
+				77C89F1917FFE335009ABB98 /* SBJson.h */,
+				77C89F1A17FFE335009ABB98 /* SBJsonParser.h */,
+				77C89F1B17FFE335009ABB98 /* SBJsonParser.m */,
+				77C89F1C17FFE335009ABB98 /* SBJsonStreamParser.h */,
+				77C89F1D17FFE335009ABB98 /* SBJsonStreamParser.m */,
+				77C89F1E17FFE335009ABB98 /* SBJsonStreamParserAccumulator.h */,
+				77C89F1F17FFE335009ABB98 /* SBJsonStreamParserAccumulator.m */,
+				77C89F2017FFE335009ABB98 /* SBJsonStreamParserAdapter.h */,
+				77C89F2117FFE335009ABB98 /* SBJsonStreamParserAdapter.m */,
+				77C89F2217FFE335009ABB98 /* SBJsonStreamParserState.h */,
+				77C89F2317FFE335009ABB98 /* SBJsonStreamParserState.m */,
+				77C89F2417FFE335009ABB98 /* SBJsonStreamWriter.h */,
+				77C89F2517FFE335009ABB98 /* SBJsonStreamWriter.m */,
+				77C89F2617FFE335009ABB98 /* SBJsonStreamWriterAccumulator.h */,
+				77C89F2717FFE335009ABB98 /* SBJsonStreamWriterAccumulator.m */,
+				77C89F2817FFE335009ABB98 /* SBJsonStreamWriterState.h */,
+				77C89F2917FFE335009ABB98 /* SBJsonStreamWriterState.m */,
+				77C89F2A17FFE335009ABB98 /* SBJsonTokeniser.h */,
+				77C89F2B17FFE335009ABB98 /* SBJsonTokeniser.m */,
+				77C89F2C17FFE335009ABB98 /* SBJsonUTF8Stream.h */,
+				77C89F2D17FFE335009ABB98 /* SBJsonUTF8Stream.m */,
+				77C89F2E17FFE335009ABB98 /* SBJsonWriter.h */,
+				77C89F2F17FFE335009ABB98 /* SBJsonWriter.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		77C89F3C18001E28009ABB98 /* MLPAutocompleteTextField */ = {
+			isa = PBXGroup;
+			children = (
+				77C89F3D18001E48009ABB98 /* MLPAutoCompleteTextField.h */,
+				77C89F3E18001E48009ABB98 /* MLPAutoCompleteTextField.m */,
+				77C89F3F18001E48009ABB98 /* MLPAutoCompleteTextFieldDataSource.h */,
+				77C89F4018001E48009ABB98 /* MLPAutoCompleteTextFieldDelegate.h */,
+				77C89F4118001E48009ABB98 /* MLPAutoCompletionObject.h */,
+				77C89F4218001E48009ABB98 /* NSString+Levenshtein.h */,
+				77C89F4318001E48009ABB98 /* NSString+Levenshtein.m */,
+			);
+			name = MLPAutocompleteTextField;
+			sourceTree = "<group>";
+		};
+		77E51DE51800807900B91DB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77E51DE61800808900B91DB8 /* Location.h */,
+				77E51DE71800808900B91DB8 /* Location.m */,
+				77E51DE81800808900B91DB8 /* User.h */,
+				77E51DE91800808900B91DB8 /* User.m */,
+				77E51DEA1800808900B91DB8 /* Beer.h */,
+				77E51DEB1800808900B91DB8 /* Beer.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		77E51DEF1800851E00B91DB8 /* RateBeerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				77E51DF01800853800B91DB8 /* BeerColorView */,
+				77E51DE21800801B00B91DB8 /* RateBeerViewController.h */,
+				77E51DE31800801B00B91DB8 /* RateBeerViewController.m */,
+			);
+			name = RateBeerViewController;
+			sourceTree = "<group>";
+		};
+		77E51DF01800853800B91DB8 /* BeerColorView */ = {
+			isa = PBXGroup;
+			children = (
+				77E51DF11800854600B91DB8 /* BeerColorView.xib */,
+				77E51DF21800854600B91DB8 /* BeerColorView.h */,
+				77E51DF31800854600B91DB8 /* BeerColorView.m */,
+			);
+			name = BeerColorView;
+			sourceTree = "<group>";
+		};
+		77E51DF7180085CA00B91DB8 /* RatingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				77E51DF8180085D700B91DB8 /* LGRatingViewController.h */,
+				77E51DF9180085D700B91DB8 /* LGRatingViewController.m */,
+			);
+			name = RatingViewController;
+			sourceTree = "<group>";
+		};
+		77E51E07180097D500B91DB8 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				77E51E08180097E700B91DB8 /* star-empty@2x.png */,
+				77E51E09180097E700B91DB8 /* star-full@2x.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		77E51E0C1800983900B91DB8 /* TopBeers */ = {
+			isa = PBXGroup;
+			children = (
+				77E51E0D1800985000B91DB8 /* TopBeersViewController.h */,
+				77E51E0E1800985000B91DB8 /* TopBeersViewController.m */,
+				77E51E0F1800985000B91DB8 /* TopBeersViewController.xib */,
+			);
+			name = TopBeers;
+			sourceTree = "<group>";
+		};
+		77E51E121800985A00B91DB8 /* TopBeersCell */ = {
+			isa = PBXGroup;
+			children = (
+				77E51E131800986D00B91DB8 /* TopBeersCellView.xib */,
+				77E51E141800986D00B91DB8 /* TopBeersCellView.h */,
+				77E51E151800986D00B91DB8 /* TopBeersCellView.m */,
+			);
+			name = TopBeersCell;
+			sourceTree = "<group>";
+		};
 		7951656417FFA77B00DB27F0 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +328,7 @@
 		7951656F17FFA77C00DB27F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77661EEE17FFB152007FAAE0 /* FacebookSDK.framework */,
 				7951657017FFA77C00DB27F0 /* Foundation.framework */,
 				7951657217FFA77C00DB27F0 /* CoreGraphics.framework */,
 				7951657417FFA77C00DB27F0 /* UIKit.framework */,
@@ -114,14 +340,28 @@
 		7951657617FFA77C00DB27F0 /* BeerMeUp */ = {
 			isa = PBXGroup;
 			children = (
+				77E51E121800985A00B91DB8 /* TopBeersCell */,
+				77E51E0C1800983900B91DB8 /* TopBeers */,
+				77E51E07180097D500B91DB8 /* Image */,
+				77E51DF7180085CA00B91DB8 /* RatingViewController */,
+				77E51DEF1800851E00B91DB8 /* RateBeerViewController */,
+				77E51DE51800807900B91DB8 /* Model */,
+				77C89F3C18001E28009ABB98 /* MLPAutocompleteTextField */,
+				77C89F1617FFE320009ABB98 /* JSON */,
 				7951657F17FFA77C00DB27F0 /* AppDelegate.h */,
 				7951658017FFA77C00DB27F0 /* AppDelegate.m */,
 				7951658217FFA77C00DB27F0 /* Main_iPhone.storyboard */,
-				7951658517FFA77C00DB27F0 /* Main_iPad.storyboard */,
-				7951658817FFA77C00DB27F0 /* ViewController.h */,
-				7951658917FFA77C00DB27F0 /* ViewController.m */,
+				7951658817FFA77C00DB27F0 /* LoginViewController.h */,
+				7951658917FFA77C00DB27F0 /* LoginViewController.m */,
 				7951658B17FFA77C00DB27F0 /* Images.xcassets */,
+				77E51DFF1800941E00B91DB8 /* madera.png */,
 				7951657717FFA77C00DB27F0 /* Supporting Files */,
+				775F573D17FFD1B7007E4B1D /* MainViewController.h */,
+				775F573E17FFD1B7007E4B1D /* MainViewController.m */,
+				77C89F46180022BE009ABB98 /* SearchBeerViewController.h */,
+				77C89F47180022BE009ABB98 /* SearchBeerViewController.m */,
+				77C89F4918002CC1009ABB98 /* DEMOCustomAutoCompleteCell.h */,
+				77C89F4A18002CC1009ABB98 /* DEMOCustomAutoCompleteCell.m */,
 			);
 			path = BeerMeUp;
 			sourceTree = "<group>";
@@ -129,8 +369,16 @@
 		7951657717FFA77C00DB27F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				77E51E181800A13A00B91DB8 /* facebook.png */,
+				77E51E05180095FC00B91DB8 /* logout.png */,
+				77E51E03180095F000B91DB8 /* search.png */,
+				77E51E011800950F00B91DB8 /* rate.png */,
+				77E51DFD180093CB00B91DB8 /* whatAzul.png */,
+				77C89F5218006473009ABB98 /* Madera bonita n.n.jpg */,
 				7951657817FFA77C00DB27F0 /* BeerMeUp-Info.plist */,
+				77C89F4C18005D6D009ABB98 /* Wood-Background-Images.jpg */,
 				7951657917FFA77C00DB27F0 /* InfoPlist.strings */,
+				77C89F50180060DF009ABB98 /* bmulogo.png */,
 				7951657C17FFA77C00DB27F0 /* main.m */,
 				7951657E17FFA77C00DB27F0 /* BeerMeUp-Prefix.pch */,
 			);
@@ -231,10 +479,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7951658717FFA77C00DB27F0 /* Main_iPad.storyboard in Resources */,
+				77E51E161800986D00B91DB8 /* TopBeersCellView.xib in Resources */,
+				77C89F4D18005D6D009ABB98 /* Wood-Background-Images.jpg in Resources */,
+				77E51DF41800854600B91DB8 /* BeerColorView.xib in Resources */,
 				7951658C17FFA77C00DB27F0 /* Images.xcassets in Resources */,
+				77C89F51180060DF009ABB98 /* bmulogo.png in Resources */,
+				77E51E191800A13A00B91DB8 /* facebook.png in Resources */,
 				7951658417FFA77C00DB27F0 /* Main_iPhone.storyboard in Resources */,
+				77E51E06180095FC00B91DB8 /* logout.png in Resources */,
+				77E51DFE180093CB00B91DB8 /* whatAzul.png in Resources */,
+				77E51E0A180097E700B91DB8 /* star-empty@2x.png in Resources */,
+				77E51E04180095F000B91DB8 /* search.png in Resources */,
+				77C89F5318006473009ABB98 /* Madera bonita n.n.jpg in Resources */,
+				77E51E021800950F00B91DB8 /* rate.png in Resources */,
 				7951657B17FFA77C00DB27F0 /* InfoPlist.strings in Resources */,
+				77E51E0B180097E700B91DB8 /* star-full@2x.png in Resources */,
+				77E51E111800985000B91DB8 /* TopBeersViewController.xib in Resources */,
+				77E51E001800941E00B91DB8 /* madera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +514,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7951658A17FFA77C00DB27F0 /* ViewController.m in Sources */,
+				77E51E171800986D00B91DB8 /* TopBeersCellView.m in Sources */,
+				7951658A17FFA77C00DB27F0 /* LoginViewController.m in Sources */,
 				7951658117FFA77C00DB27F0 /* AppDelegate.m in Sources */,
+				77E51DE41800801B00B91DB8 /* RateBeerViewController.m in Sources */,
+				77C89F3717FFE335009ABB98 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				77E51DEC1800808900B91DB8 /* Location.m in Sources */,
+				77C89F4518001E48009ABB98 /* NSString+Levenshtein.m in Sources */,
+				77C89F48180022BE009ABB98 /* SearchBeerViewController.m in Sources */,
+				77C89F3317FFE335009ABB98 /* SBJsonStreamParserAccumulator.m in Sources */,
+				77C89F3517FFE335009ABB98 /* SBJsonStreamParserState.m in Sources */,
+				77C89F3B17FFE335009ABB98 /* SBJsonWriter.m in Sources */,
 				7951657D17FFA77C00DB27F0 /* main.m in Sources */,
+				77E51E101800985000B91DB8 /* TopBeersViewController.m in Sources */,
+				77E51DF51800854600B91DB8 /* BeerColorView.m in Sources */,
+				77C89F4B18002CC1009ABB98 /* DEMOCustomAutoCompleteCell.m in Sources */,
+				77E51DED1800808900B91DB8 /* User.m in Sources */,
+				77C89F3817FFE335009ABB98 /* SBJsonStreamWriterState.m in Sources */,
+				77C89F3117FFE335009ABB98 /* SBJsonParser.m in Sources */,
+				77E51DEE1800808900B91DB8 /* Beer.m in Sources */,
+				77C89F3A17FFE335009ABB98 /* SBJsonUTF8Stream.m in Sources */,
+				77C89F3217FFE335009ABB98 /* SBJsonStreamParser.m in Sources */,
+				77C89F3917FFE335009ABB98 /* SBJsonTokeniser.m in Sources */,
+				77C89F4418001E48009ABB98 /* MLPAutoCompleteTextField.m in Sources */,
+				77C89F3017FFE335009ABB98 /* NSObject+SBJson.m in Sources */,
+				77E51DFA180085D700B91DB8 /* LGRatingViewController.m in Sources */,
+				775F573F17FFD1B7007E4B1D /* MainViewController.m in Sources */,
+				77C89F3617FFE335009ABB98 /* SBJsonStreamWriter.m in Sources */,
+				77C89F3417FFE335009ABB98 /* SBJsonStreamParserAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,14 +578,6 @@
 				7951658317FFA77C00DB27F0 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		7951658517FFA77C00DB27F0 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7951658617FFA77C00DB27F0 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		7951659B17FFA77C00DB27F0 /* InfoPlist.strings */ = {
@@ -392,6 +670,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Compean/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeerMeUp/BeerMeUp-Prefix.pch";
 				INFOPLIST_FILE = "BeerMeUp/BeerMeUp-Info.plist";
@@ -405,6 +687,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Compean/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeerMeUp/BeerMeUp-Prefix.pch";
 				INFOPLIST_FILE = "BeerMeUp/BeerMeUp-Info.plist";
@@ -474,6 +760,7 @@
 				795165A417FFA77C00DB27F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		795165A517FFA77C00DB27F0 /* Build configuration list for PBXNativeTarget "BeerMeUpTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +769,7 @@
 				795165A717FFA77C00DB27F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
