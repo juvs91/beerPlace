@@ -261,23 +261,29 @@ class BeerController extends Controller
 		 $entityBody = file_get_contents('php://input');
 			 $stdout = fopen('php://stdout', 'w');
 			 $jsonLocation = json_decode( $entityBody );
-                 /* 
+			fwrite($stdout,"resibiendo el cuerpo".$entityBody."\n");  
+
 			//the user data
-			$city = $jsonLocation->city;
-			$state = $jsonLocation->state;
-			$country = $jsonLocation->country;
-			     */           
+			$locationId = $jsonLocation->locationId;
+			//$locationId = 9;
+			/*           
 			    $city = "Monterrey";
 				$state = "NL";
-				$country = "Mexico";  
+				$country = "Mexico";
 				
-	
-		$cities = Location::model()->findByAttributes(array("name"=>$city,"sate"=>$state,"country"=>$country));
+				*/
+				
+				fwrite($stdout,"resibiendo el json");  
 
-		$sql = "SELECT idBeer, b.name, b.idType, AVG(r.stars) as average from beer b, rating r where b.id = r.idBeer group by b.name order by average desc;
-		";
+		//$cities = Location::model()->findByAttributes(array("name"=>$city,"sate"=>$state,"country"=>$country));
+
+		$sql = "SELECT idBeer, b.name, b.idType, AVG(r.stars) as average from beer b, rating r where b.id = r.idBeer AND b.locationId = " . $locationId. " group by b.name order by average desc;";
+		fwrite($stdout,"despues de el sql".$locationId);  
+        
 		
-		$beers= Yii::app()->db->createCommand($sql)->queryAll();
+		$beers= Yii::app()->db->createCommand($sql)->queryAll();  
+		fwrite($stdout,"despues de ejecutar el query");  
+		
 		$data = array();
 		foreach ($beers as $beer) {
 		   array_push($data,array("idBeer"=>$beer["idBeer"],"name"=>$beer["name"],"idType"=>$beer["idType"],"average"=>$beer["average"]));
