@@ -27,7 +27,7 @@ class BeerController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+		   /* array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
@@ -41,7 +41,7 @@ class BeerController extends Controller
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
-			),
+			), */
 		);
 	}
 
@@ -60,23 +60,34 @@ class BeerController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public static function actionCreate($beer,$idLocation)
 	{
-		$model=new Beer;
+		$model=new Beer;  
+		
+	   
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Beer']))
+		if($beer)
 		{
-			$model->attributes=$_POST['Beer'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$model->name = $beer->name;
+			 
+			$model->idType = $beer->idType;
+			
+			$model->locationid = $idLocation;
+			
+			if($model->save()){
+			   	return $model; 
+			}else {
+				echo "aqui dedabjo de save beer";
+			}  
+				//$this->redirect(array('view','id'=>$model->id));
 		}
 
-		$this->render('create',array(
+		/*$this->render('create',array(
 			'model'=>$model,
-		));
+		));*/
 	}
 
 	/**
@@ -170,4 +181,125 @@ class BeerController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	public function actionGetBeersByLocation()
+	{   
+		
+		
+			 $entityBody = file_get_contents('php://input');
+			 $stdout = fopen('php://stdout', 'w');
+			 $jsonLocation = json_decode( $entityBody );
+
+			//the user data
+			$city = $jsonLocation->city;
+			$state = $jsonLocation->state;
+			$country = $jsonLocation->country;
+			     
+			fwrite($stdout,$city.$state.$country."\n");
+			                                    
+		         /*
+		
+	  $city = str_replace('"',"",$city);   
+	  $state = str_replace('"',"",$state);   
+	  $country = str_replace('"',"",$country);  
+	
+	*/
+	  $beers = Beer::model()->findAll();  
+	  $cities = Location::model()->findByAttributes(array("name"=>$city,"sate"=>$state,"country"=>$country));
+	  $beersLocal=Beer::model()->findAllByAttributes(array("locationid"=>$cities->id));
+	
+	   
+	   
+	
+	    $data = array();
+		
+	    foreach ($beersLocal as $beer) {  
+	    	array_push($data,array("id"=>($beer->id),"name"=>($beer->name),"type"=>($beer->type->name))); 
+	    } 
+	
+	    	$this->sendData($data); 
+	
+	}  	
+	
+	public function actionGetPlacesByLocation()
+	{       
+		
+		$entityBody = file_get_contents('php://input');
+		 $stdout = fopen('php://stdout', 'w');
+		 $jsonLocation = json_decode( $entityBody );
+
+		//the user data
+		$city = $jsonLocation->city;
+		$state = $jsonLocation->state;
+		$country = $jsonLocation->country;    
+		
+		/*
+       $city = str_replace('"',"",$city);   
+       $state = str_replace('"',"",$state);   
+       $country = str_replace('"',"",$country);   
+          */
+
+
+	   	$cities = Location::model()->findAllByAttributes(array("name"=>$city,"sate"=>$state,"country"=>$country));
+	   
+		 $data = array();
+	    
+	   foreach ($cities as $city) {
+	     foreach ($city->places as $place) {
+	     	array_push($data,array("id"=>$place->id,"name"=>$place->latitude));
+	     }   
+		}
+		
+		$this->sendData($data); 
+		
+	}  
+	
+	
+	
+	public function actionGetBeersByLocationRanked()
+	{
+		 $entityBody = file_get_contents('php://input');
+			 $stdout = fopen('php://stdout', 'w');
+			 $jsonLocation = json_decode( $entityBody );
+                 /* 
+			//the user data
+			$city = $jsonLocation->city;
+			$state = $jsonLocation->state;
+			$country = $jsonLocation->country;
+			     */           
+			    $city = "Monterrey";
+				$state = "NL";
+				$country = "Mexico";  
+				
+	
+		$cities = Location::model()->findByAttributes(array("name"=>$city,"sate"=>$state,"country"=>$country));
+
+		$sql = "SELECT idBeer, b.name, b.idType, AVG(r.stars) as average from beer b, rating r where b.id = r.idBeer group by b.name order by average desc;
+		";
+		
+		$beers= Yii::app()->db->createCommand($sql)->queryAll();
+		$data = array();
+		foreach ($beers as $beer) {
+		   array_push($data,array("idBeer"=>$beer["idBeer"],"name"=>$beer["name"],"idType"=>$beer["idType"],"average"=>$beer["average"]));
+		} 
+		
+		$this->sendData($data);
+	}
+	
+	
+	
+	public function sendData($data)
+	{
+	   	header('Cache-Control: no-cache, must-revalidate');
+		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+		header('Content-type: application/json');
+
+		print_r(json_encode($data)); 
+	}
+	
+	
+	
+	
+	
+	
 }

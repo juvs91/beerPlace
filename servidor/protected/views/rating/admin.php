@@ -1,15 +1,15 @@
 <?php
-/* @var $this PlaceController */
-/* @var $model Place */
+/* @var $this RatingController */
+/* @var $model Rating */
 
 $this->breadcrumbs=array(
-	'Places'=>array('index'),
+	'Ratings'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Place', 'url'=>array('index')),
-	array('label'=>'Create Place', 'url'=>array('create')),
+	array('label'=>'List Rating', 'url'=>array('index')),
+	array('label'=>'Create Rating', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#place-grid').yiiGridView('update', {
+	$('#rating-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Places</h1>
+<h1>Manage Ratings</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -41,13 +41,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'place-grid',
+	'id'=>'rating-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'idLocation',
-		'latitude',
+		'stars',
 		'idBeer',
 		array(
 			'class'=>'CButtonColumn',

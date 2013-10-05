@@ -24,5 +24,6 @@ $this->menu=array(
 		'id',
 		'idLocation',
 		'latitude',
+		'idBeer',
 	),
 )); ?>

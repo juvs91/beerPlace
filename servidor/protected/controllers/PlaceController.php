@@ -60,23 +60,24 @@ class PlaceController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public static function actionCreate($placeJson,$idLocation,$idBeer)
 	{
 		$model=new Place;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Place']))
+		if($placeJson)
 		{
-			$model->attributes=$_POST['Place'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$model->latitude = $placeJson->name;
+			 
+			$model->idLocation = $idLocation;  
+			
+			$model->idBeer = $idBeer;  	 
+			   if($model->save())
+	 			   return $model;
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
 	}
 
 	/**
@@ -170,4 +171,10 @@ class PlaceController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	  
+	
+   
+ 
+	
 }

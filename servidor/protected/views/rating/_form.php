@@ -1,13 +1,13 @@
 <?php
-/* @var $this PlaceController */
-/* @var $model Place */
+/* @var $this RatingController */
+/* @var $model Rating */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'place-form',
+	'id'=>'rating-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -16,15 +16,9 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idLocation'); ?>
-		<?php echo $form->textField($model,'idLocation'); ?>
-		<?php echo $form->error($model,'idLocation'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'latitude'); ?>
-		<?php echo $form->textField($model,'latitude',array('size'=>60,'maxlength'=>1024)); ?>
-		<?php echo $form->error($model,'latitude'); ?>
+		<?php echo $form->labelEx($model,'stars'); ?>
+		<?php echo $form->textField($model,'stars'); ?>
+		<?php echo $form->error($model,'stars'); ?>
 	</div>
 
 	<div class="row">

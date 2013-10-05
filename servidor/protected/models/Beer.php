@@ -11,6 +11,7 @@
  *
  * The followings are the available model relations:
  * @property Location $location
+ * @property Rating[] $ratings
  * @property User[] $users
  */
 class Beer extends CActiveRecord
@@ -59,7 +60,10 @@ class Beer extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'location' => array(self::BELONGS_TO, 'Location', 'locationid'),
-			'users' => array(self::MANY_MANY, 'User', 'vote(idBeer, idUser)'),
+			'ratings' => array(self::HAS_MANY, 'Rating', 'idBeer'),
+			'users' => array(self::MANY_MANY, 'User', 'vote(idBeer, idUser)'),  
+			'type'=> array(self::BELONGS_TO,'Type','idType'),   
+			
 		);
 	}
 

@@ -1,14 +1,16 @@
 <?php
 
 /**
- * This is the model class for table "place".
+ * This is the model class for table "Place".
  *
- * The followings are the available columns in table 'place':
+ * The followings are the available columns in table 'Place':
  * @property integer $id
  * @property integer $idLocation
  * @property string $latitude
+ * @property integer $idBeer
  *
  * The followings are the available model relations:
+ * @property Beer $idBeer0
  * @property Location $idLocation0
  */
 class Place extends CActiveRecord
@@ -28,7 +30,7 @@ class Place extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'place';
+		return 'Place';
 	}
 
 	/**
@@ -39,12 +41,12 @@ class Place extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idLocation', 'required'),
-			array('idLocation', 'numerical', 'integerOnly'=>true),
+			array('idLocation, idBeer', 'required'),
+			array('idLocation, idBeer', 'numerical', 'integerOnly'=>true),
 			array('latitude', 'length', 'max'=>1024),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, idLocation, latitude', 'safe', 'on'=>'search'),
+			array('id, idLocation, latitude, idBeer', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,6 +58,7 @@ class Place extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idBeer0' => array(self::BELONGS_TO, 'Beer', 'idBeer'),
 			'idLocation0' => array(self::BELONGS_TO, 'Location', 'idLocation'),
 		);
 	}
@@ -69,6 +72,7 @@ class Place extends CActiveRecord
 			'id' => 'ID',
 			'idLocation' => 'Id Location',
 			'latitude' => 'Latitude',
+			'idBeer' => 'Id Beer',
 		);
 	}
 
@@ -86,6 +90,7 @@ class Place extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('idLocation',$this->idLocation);
 		$criteria->compare('latitude',$this->latitude,true);
+		$criteria->compare('idBeer',$this->idBeer);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -17,6 +17,11 @@ FOREIGN KEY (idCity) REFERENCES city(id) on delete cascade on update cascade
 
 )engine innoDB;  
 
+ALTER TABLE table_name(
+ALTER COLUM user int NOT NULL
+)
+
+
 create table type(
 id int NOT NULL AUTO_INCREMENT,
 name varchar(250),
@@ -27,7 +32,10 @@ create table user(
 id int NOT NULL AUTO_INCREMENT,
 PRIMARY KEY (id)
 )engine innoDB;
-
+                
+ALTER TABLE user(
+ADD contributed TINYINT
+);
 create table place(
 id int NOT NULL AUTO_INCREMENT,
 idLocation int NOT NULL,

@@ -27,7 +27,7 @@ class LocationController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			/*array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
@@ -41,7 +41,7 @@ class LocationController extends Controller
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
-			),
+			),*/
 		);
 	}
 
@@ -170,4 +170,50 @@ class LocationController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	public static function getLocation($location)
+	{     
+		//var_dump($location);
+		$id = Location::model()->findByAttributes(array("name"=>$location->city,"sate"=>$location->state,"country"=>$location->country)); 
+		return $id;
+	}
+	
+	
+	public function actionGetAllLocation()
+	{
+		$locations = Location::model()->findAll(array("order"=>"name,sate,country"));
+		  
+		
+		  $data = array(); 
+		foreach ($locations as $location) {  
+			$arrPlace = array();
+			foreach ($location->places as $place) {
+				array_push($arrPlace,array("name"=>$place->latitude,"id"=>$place->id));
+			}  
+			array_push($data,array("id"=>$location->id,"Location"=>($location->name.", ".$location->sate.", ".$location->country),"Place"=>$arrPlace));
+			unset($arrPlace);
+		}  
+ 
+
+		$this->sendData($data); 
+		 
+		
+		 
+		
+	}
+	
+	public function sendData($data)
+	{
+	   	header('Cache-Control: no-cache, must-revalidate');
+		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+		header('Content-type: application/json');
+
+		print_r(json_encode($data)); 
+	}
+ 
+	
+	
+	
+	
+	
 }

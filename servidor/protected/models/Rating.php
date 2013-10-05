@@ -1,21 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "rating".
  *
- * The followings are the available columns in table 'user':
+ * The followings are the available columns in table 'rating':
  * @property integer $id
- * @property integer $contributed
+ * @property integer $stars
+ * @property integer $idBeer
  *
  * The followings are the available model relations:
- * @property Beer[] $beers
+ * @property Beer $idBeer0
  */
-class User extends CActiveRecord
+class Rating extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Rating the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +28,7 @@ class User extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'user';
+		return 'rating';
 	}
 
 	/**
@@ -38,11 +39,12 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id', 'required'),
-			array('id, contributed', 'numerical', 'integerOnly'=>true),
+			array('stars, idBeer', 'required'),
+			array('stars, idBeer', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, contributed', 'safe', 'on'=>'search'),
+			array('id, stars, idBeer', 'safe', 'on'=>'search'),  
+			
 		);
 	}
 
@@ -54,7 +56,10 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'beers' => array(self::MANY_MANY, 'Beer', 'vote(idUser, idBeer)'),
+			'idBeer0' => array(self::BELONGS_TO, 'Beer', 'idBeer'), 
+			'averageRating' => array(self::STAT, 'Beer', 'idBeer', 'select' => 'AVG(stars)'),  
+			
+			
 		);
 	}
 
@@ -65,7 +70,8 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'contributed' => 'Contributed',
+			'stars' => 'Stars',
+			'idBeer' => 'Id Beer',
 		);
 	}
 
@@ -81,7 +87,8 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('contributed',$this->contributed);
+		$criteria->compare('stars',$this->stars);
+		$criteria->compare('idBeer',$this->idBeer);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

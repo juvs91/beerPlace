@@ -1,6 +1,6 @@
 <?php
 
-class TypeController extends Controller
+class RatingController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -26,8 +26,8 @@ class TypeController extends Controller
 	 */
 	public function accessRules()
 	{
-		/*return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+		return array(
+		   /* array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
@@ -41,8 +41,8 @@ class TypeController extends Controller
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
-			),
-		);*/
+			),  */
+		);
 	}
 
 	/**
@@ -60,18 +60,20 @@ class TypeController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public static function actionCreate($ratingJson,$beer)
 	{
-		$model=new Type;
+		$model=new Rating;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+	
 
-		if(isset($_POST['Type']))
+		if($ratingJson)
 		{
-			$model->attributes=$_POST['Type'];
+			$model->stars = $ratingJson->stars;
+			 
+			$model->idBeer = $beer;
+						
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				return $model;
 		}
 
 		$this->render('create',array(
@@ -91,9 +93,9 @@ class TypeController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Type']))
+		if(isset($_POST['Rating']))
 		{
-			$model->attributes=$_POST['Type'];
+			$model->attributes=$_POST['Rating'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -122,7 +124,7 @@ class TypeController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Type');
+		$dataProvider=new CActiveDataProvider('Rating');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +135,10 @@ class TypeController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Type('search');
+		$model=new Rating('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Type']))
-			$model->attributes=$_GET['Type'];
+		if(isset($_GET['Rating']))
+			$model->attributes=$_GET['Rating'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -147,12 +149,12 @@ class TypeController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Type the loaded model
+	 * @return Rating the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Type::model()->findByPk($id);
+		$model=Rating::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -160,11 +162,11 @@ class TypeController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Type $model the model to be validated
+	 * @param Rating $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='type-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='rating-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

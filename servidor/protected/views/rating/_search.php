@@ -1,6 +1,6 @@
 <?php
-/* @var $this PlaceController */
-/* @var $model Place */
+/* @var $this RatingController */
+/* @var $model Rating */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,13 +17,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idLocation'); ?>
-		<?php echo $form->textField($model,'idLocation'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'latitude'); ?>
-		<?php echo $form->textField($model,'latitude',array('size'=>60,'maxlength'=>1024)); ?>
+		<?php echo $form->label($model,'stars'); ?>
+		<?php echo $form->textField($model,'stars'); ?>
 	</div>
 
 	<div class="row">
